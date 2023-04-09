@@ -1,0 +1,4 @@
+TouchableOpacity : 터치하면 글씨색 흐렸다 밝아짐
+TouchableHighlight : 터치하면 글씨주변 박스로 색변함
+TouchableWithoutFeedback : 터치하면 아무 이미지 변화없이 기능만동작
+Pressable : 이것저것 들어있음 딜레이 같은기능 3초 누르면 실행 등등~
