@@ -24,10 +24,19 @@ export default function App() {
 	const [dataLoad, setDataLoad] = useState(false);
 	useEffect(() => {
 		loadToDos();
+		changeScreenOrientation();
+		ScreenOrientation.getOrientationAsync().then((data) => {
+			console.log(data);
+		})
 	}, []);
 	const travel = () => setWorking(false);
 	const work = () => setWorking(true);
 	const setRef = useRef();
+
+	// 화면레프트 고정
+	async function changeScreenOrientation() {
+		await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
+	}
 
 	// 스토리지에 toDos 저장하기
 	const saveToDos = async (toSave) => {
@@ -158,7 +167,7 @@ const styles = StyleSheet.create({
 	header: {
 		justifyContent: 'space-between',
 		flexDirection: 'row',
-		marginTop: 100,
+		marginTop: 20,
 	},
 	btnText: {
 		fontSize: 38,
