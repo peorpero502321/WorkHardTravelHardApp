@@ -129,7 +129,7 @@ export default function App() {
 						onSubmitEditing={addTodo}
 						returnKeyType='done'
 						onChangeText={onChangeText}
-						placeholder={working ? '오늘 해야할일' : '가고 싶은 곳'}
+						placeholder={working ? '할일' : '갈 곳'}
 						style={styles.input}
 					/>
 					<ScrollView>
